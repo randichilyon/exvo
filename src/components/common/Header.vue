@@ -88,6 +88,7 @@ export default {
       padding: 7px;
       background: #0787C3;
       border-radius: 8px 8px 0 0;
+      justify-content: space-between;
       .grid, .chevron {
         transform: scale(.75);
       }
