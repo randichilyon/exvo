@@ -46,7 +46,7 @@
   <div v-else class="filter-mobile">
     <BliChipChoice
       class="filter-button"
-      :itemValue="testFilter"
+      :itemValue="defaultFilterValue"
       v-model="testFilter"
       outline
       has-left-icon

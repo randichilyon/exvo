@@ -10,6 +10,7 @@ export default {
       checkbox: false,
       test: '',
       testFilter: '',
+      defaultFilterValue: 'default',
       items: [{
         value: 'a',
         label: 'Ramah lingkungan'

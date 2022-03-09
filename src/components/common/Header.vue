@@ -18,7 +18,7 @@
           </div>
           <BliIconChevronDown />
         </div>
-        <input />
+        <input placeholder="sedotan" />
       </div>
       <div class="header-right">
         <div class="icon-wrapper">
