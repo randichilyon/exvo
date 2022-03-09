@@ -15,6 +15,10 @@
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
+    "@blibli/blue-icon": "^0.14.0",
+    "@blibli/blue-layouts": "^1.0.0-rc.3",
+    "@blibli/blue-tokens": "^1.9.0",
+    "@blibli/dls": "^2.18.2-1",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^8.2.1",
