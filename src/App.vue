@@ -1,13 +1,18 @@
 <template>
   <div id="app" class="blu">
-    <img src="./assets/logo.png">
+    <Header />
     <router-view/>
   </div>
 </template>
 
 <script>
+const Header = () => import(/* webpackChunkName: "c-header" */ '@/components/common/Header')
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header
+  }
 }
 </script>
 
@@ -15,11 +20,10 @@ export default {
 @import '~@blibli/blue-tokens/dist/blue-tokens.scss';
 @import '~@blibli/blue-supports/dist/blue-supports.scss';
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $blu-font-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>

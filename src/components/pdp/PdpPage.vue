@@ -1,6 +1,5 @@
 <template>
   <div class="pdp-page">
-
   </div>
 </template>
 
