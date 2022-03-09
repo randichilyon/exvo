@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="blu">
     <img src="./assets/logo.png">
     <router-view/>
   </div>
@@ -11,7 +11,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '~@blibli/blue-tokens/dist/blue-tokens.scss';
+@import '~@blibli/blue-supports/dist/blue-supports.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
