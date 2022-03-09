@@ -49,7 +49,7 @@ export default {
   computed: {
     ...mapGetters(['filterGreen', 'isMobile']),
     shownProducts () {
-      let result = sedotan
+      let result = [...sedotan]
       if (this.filterGreen) {
         result = result.filter(data => {
           return data.greenScore > 2
@@ -59,6 +59,7 @@ export default {
         result = result.sort((a, b) => {
           return b.greenScore - a.greenScore
         })
+        return result
       }
       return result
     }
