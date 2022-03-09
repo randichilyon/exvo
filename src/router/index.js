@@ -13,7 +13,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/product',
+      path: '/cari/:key',
       name: 'PdpPage',
       component: PdpPage
     }

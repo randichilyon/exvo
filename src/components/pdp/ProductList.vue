@@ -9,7 +9,7 @@
           Tandai kategori untuk pencarian lebih spesifik.
         </div>
       </div>
-      <div class="right-side">
+      <div v-if="!isMobile" class="right-side">
         <BliIconViewGrid class="grid"/>
         <BliIconViewList class="list"/>
         <BliDropdown
@@ -96,7 +96,7 @@
     flex-wrap: wrap;
     gap: 12px;
     padding: 12px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 }
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <BliCard class="filter-card">
+  <BliCard
+    v-if="!isMobile"
+    class="filter-card">
     <BliCardContent class="filter-option">
       <div class="filter-option__address">
         <div class="text">Dekat alamatmu</div>
@@ -41,6 +43,35 @@
       />
     </BliCardContent>
   </BliCard>
+  <div v-else class="filter-mobile">
+    <BliChipChoice
+      class="filter-button"
+      :itemValue="testFilter"
+      v-model="testFilter"
+      outline
+      has-left-icon
+      single
+    >
+      <BliIconSortFilter />
+      Filter
+    </BliChipChoice>
+    <BliChipChoice
+      v-for="i in items"
+      class="filter-options"
+      :key="'blichipchoice' + i.value"
+      :itemValue="i.value"
+      v-model="test"
+      single
+    >
+      <div
+        v-if="i.label === '4 ke atas'"
+        class="star"
+      >
+        <BliIconStar />
+      </div>
+      {{i.label}}
+    </BliChipChoice>
+  </div>
 </template>
 
 <script src="./js/filter-card.js"></script>
@@ -118,5 +149,25 @@
     }
   }
 }
+.filter-mobile {
+  display: flex;
+  overflow: scroll;
+  .filter-button {
+    /deep/ span, svg {
+      color: #858585 !important;
+      border: 1px solid #E0E0E0 !important;
+    }
+  }
+  .filter-options {
+    .star {
+      svg {
+        transform: scale(.75) !important;
+        color: #fdb813 !important;
+        align-self: center;
+      }
+    }
+  }
+}
+
 </style>
 

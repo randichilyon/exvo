@@ -28,9 +28,26 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 2,
     "isBlibliShipping": false,
     "2hd": false
+  },
+  {
+    "name": "1pc Sedotan Stainless 6mm Korea Food Grade Stainless (Lurus / Bengkok)",
+    "price": "Rp4.198",
+    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg",
+    "official": false,
+    "review": {
+      "rating": 5,
+      "count": 2,
+      "absoluteRating": 5
+    },
+    "location": "Kota Jakarta Barat",
+    "badge": "Diamond",
+    "greenScore": 5,
+    "isBlibliShipping": false,
+    "2hd": false,
+    "sold": "26"
   },
   {
     "name": "SEDOTAN STERIL SEDOTAN PLASTIK PANJANG 26 CM - DIAMETER 6MM",
@@ -44,7 +61,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Bronze",
-    "greenScore": 5,
+    "greenScore": 2,
     "isBlibliShipping": false,
     "2hd": false
   },
@@ -145,7 +162,7 @@ export default [
     },
     "location": "Kota Jakarta Barat",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -162,7 +179,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 5,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "156"
@@ -213,7 +230,7 @@ export default [
     },
     "location": "Kab. Bekasi",
     "badge": "Diamond",
-    "greenScore": 2,
+    "greenScore": 4,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "84"
@@ -230,7 +247,7 @@ export default [
     },
     "location": "Kota Tangerang",
     "badge": "Diamond",
-    "greenScore": 1,
+    "greenScore": 4,
     "isBlibliShipping": true,
     "2hd": true,
     "sold": "24"
@@ -247,7 +264,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "33"
@@ -264,7 +281,7 @@ export default [
     },
     "location": "Kota Jakarta Barat",
     "badge": "Gold",
-    "greenScore": 4,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "19"
@@ -281,7 +298,7 @@ export default [
     },
     "location": "Kab. Kediri",
     "badge": "Diamond",
-    "greenScore": 0,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "4"
@@ -298,7 +315,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "10"
@@ -331,7 +348,7 @@ export default [
     },
     "location": "Kota Jakarta Barat",
     "badge": "Diamond",
-    "greenScore": 2,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -365,7 +382,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 4,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "186"
@@ -382,7 +399,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 0,
+    "greenScore": 5,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -399,7 +416,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "186"
@@ -416,7 +433,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 2,
+    "greenScore": 4,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -433,7 +450,7 @@ export default [
     },
     "location": "Kab. Kediri",
     "badge": "Diamond",
-    "greenScore": 2,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "2"
@@ -500,7 +517,7 @@ export default [
     },
     "location": "Kota Surabaya",
     "badge": "Diamond",
-    "greenScore": 0,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -517,7 +534,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 1,
+    "greenScore": 5,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "3"
@@ -534,7 +551,7 @@ export default [
     },
     "location": "Kab. Kediri",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 2,
     "isBlibliShipping": false,
     "2hd": false
   },
@@ -556,23 +573,6 @@ export default [
     "sold": "3"
   },
   {
-    "name": "1pc Sedotan Stainless 6mm Korea Food Grade Stainless (Lurus / Bengkok)",
-    "price": "Rp4.198",
-    "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg",
-    "official": false,
-    "review": {
-      "rating": 5,
-      "count": 2,
-      "absoluteRating": 5
-    },
-    "location": "Kota Jakarta Barat",
-    "badge": "Diamond",
-    "greenScore": 5,
-    "isBlibliShipping": false,
-    "2hd": false,
-    "sold": "26"
-  },
-  {
     "name": "Baby Safe Straw Cup Bottle With Weighted Straw 300ml Botol Sedotan Pemberat 360 Derajat",
     "price": "Rp49.900",
     "image": "https://www.static-src.com/wcsstore/Indraprastha/images/catalog/medium//98/MTA-9138508/baby_safe_baby_safe_straw_cup_bottle_with_weighted_straw_300ml_botol_sedotan_pemberat_360_derajat_full01_ep12ell2.jpg",
@@ -584,7 +584,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 1,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "9"
@@ -601,7 +601,7 @@ export default [
     },
     "location": "Kota Jakarta Utara",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "64"
@@ -618,7 +618,7 @@ export default [
     },
     "location": "Kota Surabaya",
     "badge": "Diamond",
-    "greenScore": 4,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "21"
@@ -635,7 +635,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 2,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "2"
@@ -652,7 +652,7 @@ export default [
     },
     "location": "Kota Jakarta Barat",
     "badge": "Diamond",
-    "greenScore": 0,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false
   },
@@ -668,7 +668,7 @@ export default [
     },
     "location": "Kota Tangerang Selatan",
     "badge": "Diamond",
-    "greenScore": 5,
+    "greenScore": 3,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "2"

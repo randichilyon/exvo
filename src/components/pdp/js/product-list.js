@@ -47,7 +47,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['filterGreen']),
+    ...mapGetters(['filterGreen', 'isMobile']),
     shownProducts () {
       let result = sedotan
       if (this.filterGreen) {

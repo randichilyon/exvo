@@ -16,7 +16,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isMobile'])
+    ...mapGetters(['isMobile']),
+    keyword () {
+      return this.$route.params.key
+    }
   },
   methods: {
   }

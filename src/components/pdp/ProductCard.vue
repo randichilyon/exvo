@@ -8,7 +8,7 @@
       :src="product.image"
     />
     <img
-      v-if="product.greenScore > 2" src="@/assets/gif/eco-gif.gif"
+      v-if="product.greenScore > 2" src="@/assets/png/eco.png"
       class="product-card__eco"
     />
     <div class="product-card__info">
@@ -51,6 +51,9 @@
   cursor: pointer;
   width: 19%;
   position: relative;
+  @include mobile {
+    width: 48%;
+  }
   &__image {
     border-radius: 10px 10px 0 0;
     height: 182px;
@@ -62,7 +65,6 @@
     top: 0;
     max-width: 50px;
     right: 0;
-    border-radius: 30px;
   }
   &__info {
     margin-top: 16px;
@@ -71,6 +73,13 @@
     .name {
       font-size: 1.4rem;
       color: rgba(0, 0, 0, 0.87);
+      -webkit-box-orient: vertical;
+      word-break: break-word;
+      display: block;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .price {
       color: #f37021;
