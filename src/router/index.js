@@ -13,7 +13,7 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: '/product',
+      path: '/p/:productName/:id',
       name: 'PdpPage',
       component: PdpPage
     }

@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="blu">
-    <Header />
+<!--    <Header />-->
     <router-view/>
   </div>
 </template>
@@ -23,7 +23,7 @@ export default {
   font-family: $blu-font-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  //text-align: center;
   color: #2c3e50;
 }
 </style>
