@@ -1,22 +1,135 @@
 <template>
-  <div class="pdp-page">
-<<<<<<< HEAD
-    <div class="pdp-page-wrapper">
-      <div class="pdp-page-header">
-        <div class="pdp-page-header-left">
+  <div class="product-detail">
+    <div class="product-detail-wrapper-web" v-if="!isMobile">
+      <div class="breadcrumb">
+        <a>Home & Living</a> > <a>Perlengkapan Ruang Makan</a> > <a>Peralatan Minum</a> > Gelas & Perangkat Minum
+      </div>
+      <div class="web-content">
+        <div class="web-content-left">
+          <img
+            src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg"
+            alt="default image"
+            height="400px"
+            width="400px"
+            style="border-radius:12px">
+        </div>
+        <div class="web-content-mid">
+          <div class="eco">
+            <img src="@/assets/blibli-eco.png" style="width: 48px;height: 33px;">
+          </div>
+          <div class="product-name">
+            <p>
+              1pc Sedotan Stainless 6mm Korea Food Grade Stainless (Lurus / Bengkok)
+            </p>
+          </div>
+          <div class="web-content-mid-rating-info">
+            <RatingInfo/>
+          </div>
+          <div class="price">
+            Rp4.198
+          </div>
+          <div>
+            <ProductDescription/>
+          </div>
+        </div>
+        <div class="web-content-right">
+          <div class="merchant-info">
+            <div class="merchant-info-header">
+              <div class="image">
+                <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/mlogo/MGO-60026.jpg"
+                     style="width: 40px;height: 40px">
+              </div>
+              <div class="detail">
+                <a>MGM Online</a><br>
+                Kota Jakarta Barat<br>
+                Buka Kamis 08.00 - 17.00 WIB
+              </div>
+            </div>
+            <div class="merchant-info-mid">
+              <div class="review-pos">
+                <h4>97%</h4>
+                Ulasan Positif
+              </div>
+              <div class="on-time">
+                <h4>97%</h4>
+                Proses tepat waktu
+              </div>
+              <div class="response-time">
+                <h4>93%</h4>
+                Kecepatan Respon
+              </div>
+            </div>
+            <div class="merchant-info-bottom">
+              <div class="follow">
+                <BliButton color="secondary" class="follow-btn"> ikuti</BliButton>
+              </div>
+              <div class="seller-chat">
+                <BliButton outline color="secondary" class="seller-chat-btn">
+                  <BliIconChat class="btn-chat"/>
+                  Chat
+                </BliButton>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="web-option">
+        <div class="thumbnail">
+          <img
+            src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg"
+            alt="default image"
+            height="48px"
+            width="48px"
+            style="border-radius:12px">
+        </div>
+        <div class="name"> 1pc Sedotan Stainless 6mm Korea Food Grade Stainless (Lurus / Bengkok)</div>
+        <div class="minus">
+          <BliButton outline color="secondary"> -</BliButton>
+        </div>
+        <div class="count"> 3</div>
+        <div class="plus">
+          <BliButton outline color="secondary"> +</BliButton>
+        </div>
+        <div class="totalPrice">
+          Total Harga<br>
+          <p class="price">Rp4.198</p>
+        </div>
+        <div class="bag">
+          <BliButton class="btn-bag" color="secondary">
+            <BliIconAddToBag/>
+          </BliButton>
+        </div>
+        <div class="buy-now">
+          <BliButton color="primary" class="btn-buy-now"> Beli Sekarang</BliButton>
+        </div>
+        <div class="wishlist">
+          <BliIconWishlist/>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-detail-wrapper" v-if="isMobile">
+      <div class="product-detail-header">
+        <div class="product-detail-header-left">
           <div class="icon">
             <BliIconArrowLeft/>
           </div>
         </div>
-        <div class="pdp-page-header-right">
+        <div class="product-detail-header-right">
           <div>
-            <div class="icon" ><BliIconSearch /></div>
-            <div class="icon" ><BliIconBag/></div>
-              <div class="icon" ><BliIconShare/></div>
+            <div class="icon">
+              <BliIconSearch/>
+            </div>
+            <div class="icon">
+              <BliIconBag/>
+            </div>
+            <div class="icon">
+              <BliIconShare/>
+            </div>
           </div>
         </div>
       </div>
-      <div class="pdp-page-product-info">
+      <div class="product-detail-product-info">
         <div class="image">
           <img
             src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg"
@@ -35,15 +148,7 @@
           </div>
           <div class="rating-info">
             <div class="rating">
-              <div class="star">
-                <BliIconStar/>
-              </div>
-              <div class="wording">
-                <div class="rate">5.0</div>
-                <div class="rateCount">(2)</div>
-                <div class="orderCount"> &nbsp; • &nbsp; Terjual 26</div>
-                <!--              <p>5.0 (2) &nbsp; • &nbsp; Terjual 26</p>-->
-              </div>
+              <RatingInfo/>
             </div>
             <div class="eco">
               <img src="@/assets/blibli-eco.png">
@@ -51,27 +156,12 @@
           </div>
         </div>
       </div>
-      <div class="pdp-page-description">
+      <div class="product-detail-description">
         <div class="title">Deskripsi produk</div>
-        <div class="brand">Merk: <a>MGM</a></div>
-        <div class="category">Kategori: <a>Perlengkapan Ruang Makan</a></div>
-        <a>
-          <div class="usp">
-            <div class="return">
-              <BliIconFreeReturn/>
-            </div> &nbsp;&nbsp;Gratis retur 15 hari (bersyarat)
-          </div>
-        </a>
-        <br>
-        <br>
-        <p>Dimensi:</p>
-        Sedotan Bengkok Tinggi: 20.5CM
-        <br>
-        Panjang Sedotan : 21.5CM
-        <br>
-        Dimensi: 6mm
+        <ProductDescription/>
+
       </div>
-      <div class="pdp-page-option">
+      <div class="product-detail-option">
         <div class="seller-chat">
           <BliButton outline color="secondary">
             <BliIconChat class="btn-chat"/>
@@ -87,49 +177,16 @@
         </div>
       </div>
     </div>
-=======
-    <div
-      v-if="isMobile"
-      class="header-mobile"
-    >
-      <BliIconArrowLeft />
-      <div class="search">
-        <BliIconSearch />
-        <input :placeholder="keyword" :value="keyword" />
-      </div>
-      <BliIconViewList />
-      <BliIconBag />
-      <BliIconHome />
-    </div>
-    <div
-      v-if="isMobile"
-      class="header-address"
-    >
-      <BliIconLocation />
-      <div class="text">
-        <a>Tambah alamat</a> biar belanja lebih asyik.
-      </div>
-    </div>
-    <div v-if="!isMobile" class="left-side">
-      <FilterList />
-    </div>
-    <div class="right-side">
-      <FilterCard />
-      <ProductList />
-    </div>
->>>>>>> master
   </div>
 </template>
 
-<script src="./js/pdp-page.js"></script>
+<script src="./js/product-detail.js"></script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import "~@blibli/dls/src/assets/scss/mixins/responsive";
 
-.pdp-page {
-<<<<<<< HEAD
-  background-color: lightgrey;
+.product-detail {
   height: 850px;
   display: flex;
   top: 0;
@@ -139,6 +196,213 @@
   &-wrapper {
     width: 100%;
     position: relative;
+    background-color: lightgrey;
+  }
+
+  &-wrapper-web {
+    display: block;
+    position: relative;
+    background-color: white;
+    margin: 12px auto 0;
+  }
+
+  .web-option {
+    border-radius: 16px 16px 0 0;
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+
+    .thumbnail {
+      float: left;
+      width: 5%;
+    }
+
+    .name {
+      float: left;
+      width: 30%;
+    }
+
+    .plus {
+      float: left;
+      width: 5%;
+    }
+
+    .count {
+      float: left;
+      width: 5%;
+    }
+
+    .minus {
+      float: left;
+      width: 5%;
+    }
+
+    .totalPrice {
+      float: left;
+      width: 10%;
+    }
+
+    .bag {
+      float: left;
+      width: 15%;
+    }
+
+    .buy-now {
+      float: left;
+      width: 15%;
+    }
+
+    .wishlist {
+      float: left;
+      width: 10%;
+    }
+
+  }
+
+  .breadcrumb {
+    font-size: 1.4rem;
+    padding-top: 10px;
+    text-align: left;
+    font-family: "effra", Helvetica, Arial, sans-serif;
+  }
+
+  .web-content {
+
+    margin: 0 auto 0;
+    padding-top: 30px;
+    position: relative;
+    display: block;
+    height: 400px;
+
+    &-left {
+      width: 400px;
+      float: left;
+    }
+
+    &-mid {
+      float: left;
+      width: 530px;
+      padding-left: 20px;
+
+      .product-name {
+        text-align: left;
+      }
+
+      .eco {
+        width: 100%;
+        display: block;
+        float: left;
+      }
+
+      .price {
+        width: 100%;
+        float: left;
+        font-size: 2.4rem;
+        color: #f37021;
+        text-align: left;
+        font-family: efframedium, Helvetica, Arial, sans-serif;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #d6d6d6;
+      }
+
+      &-rating-info {
+        width: 100%;
+        position: relative;
+        margin-top: -13px;
+
+        .rate {
+          display: block;
+          float: left;
+        }
+      }
+    }
+
+    &-right {
+      float: left;
+      width: 250px;
+      margin-left: 20px;
+      box-shadow: 0 1px 6px 0 lightgrey;
+      border-radius: 16px;
+
+      .merchant-info {
+        padding: 10px;
+        float: left;
+
+        &-header {
+          height: 100px;
+
+          .image {
+            width: 30%;
+            float: left;
+          }
+
+          .detail {
+            width: 70%;
+            float: left;
+            text-align: left;
+          }
+        }
+
+        &-mid {
+          height: 75px;
+          text-align: center;
+
+          .review-pos {
+            font-size: 1.2rem;
+            float: left;
+            width: 33%;
+            height: 75px;
+            padding-right: 5px;
+            border-right: lightgrey 1px solid;
+          }
+
+          .on-time {
+            font-size: 1.2rem;
+            float: left;
+            width: 33%;
+            height: 75px;
+            border-right: lightgrey 1px solid;
+          }
+
+          .response-time {
+            font-size: 1.2rem;
+            float: left;
+            width: 34%;
+            height: 75px;
+          }
+        }
+
+        &-bottom {
+          padding-top: 20px;
+
+          .follow {
+            float: left;
+            width: 50%;
+
+            &-btn {
+              width: 100px;
+              height: 32px;
+            }
+          }
+
+          .seller-chat {
+            float: left;
+            width: 50%;
+
+            &-btn {
+              height: 32px;
+              width: 100px;
+            }
+          }
+        }
+
+      }
+    }
+
   }
 
   &-header {
@@ -178,6 +442,7 @@
     }
 
     .product-name {
+      text-align: left;
       background-color: transparent;
       font-family: efframedium, Helvetica, Arial, sans-serif;
       height: 130px;
@@ -194,10 +459,29 @@
         color: #f37021;
         margin-top: -10px;
       }
+
+      .rating-info {
+        overflow: auto;
+        padding-top: 10px;
+
+        .rating {
+          float: left;
+          display: inline-flex;
+        }
+
+      }
+    }
+
+    .eco {
+      float: right;
+      width: 73px;
+      height: 28px;
+      margin-top: -20px;
     }
   }
 
   &-description {
+    text-align: left;
     float: left;
     display: block;
     background-color: white;
@@ -211,18 +495,6 @@
       font-family: efframedium, Helvetica, Arial, sans-serif;
     }
 
-    .brand {
-      padding-top: 10px;
-    }
-
-    .usp {
-      font-size: 1.6rem;
-      display: inline-flex;
-      padding-top: 10px;
-
-      .return {
-      }
-    }
   }
 
   &-option {
@@ -248,12 +520,15 @@
       width: 60%;
       float: left;
     }
-    .btn-chat{
+
+    .btn-chat {
     }
-    .btn-buy-now{
+
+    .btn-buy-now {
       width: 230px;
     }
-    .btn-bag{
+
+    .btn-bag {
       width: 80px;
     }
   }
@@ -266,107 +541,6 @@
   height: 32px;
   width: 32px;
   display: inline-grid;
-}
-
-.rating-info {
-  overflow: auto;
-  height: 60px;
-  padding-top: 20px;
-
-  .eco {
-    float: right;
-    width: 73px;
-    height: 28px;
-    margin-top: -20px;
-  }
-
-  .rating {
-    float: left;
-    display: inline-flex;
-
-    .star {
-      color: #fdb813;
-    }
-
-    .wording {
-      font-family: efframedium, Helvetica, Arial, sans-serif;
-      color: rgba(0, 0, 0, .6);
-      padding-left: 2px;
-      font-size: 1.4rem;
-      margin-top: 2px;
-      display: inline-flex;
-
-      .rateCount, .orderCount {
-        margin-left: 3px;
-        color: rgba(0, 0, 0, .38);
-      }
-=======
-  display: flex;
-  max-width: 1230px;
-  margin: 16px auto;
-  gap: 16px;
-  .left-side {
-    min-width: 17.75%;
-  }
-  .right-side {
-    width: 100%;
-  }
-  @include mobile {
-    flex-direction: column;
-    gap: 0;
-    margin: 0;
-  }
-}
-
-.header-address {
-  display: flex;
-  font-family: efframedium;
-  color: rgba(0, 0, 0, 0.38);
-  font-size: 12px;
-  .text {
-    align-self: center;
-  }
-  svg {
-    transform: scale(.5);
-    align-self: center;
-  }
-  a {
-    color: #0095DA;
-  }
-}
-
-.header-mobile {
-  z-index: 99;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-  position: sticky;
-  top: 0;
-  svg {
-    align-self: center;
-    color: rgb(133, 133, 133);
-  }
-  .search {
-    display: flex;
-    height: 36px;
-    padding: 9px 10px 9px 4px;
-    border-radius: 8px;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    background-color: #f1f1f1;
-    align-self: center;
-    svg {
-      color:  rgb(44, 62, 80);
-      transform: scale(.75);
-      align-self: center;
-    }
-    input {
-      border: none;
-      background-color: #f1f1f1;
->>>>>>> master
-    }
-  }
 }
 
 </style>

@@ -1,26 +1,19 @@
-import { mapGetters } from 'vuex'
-
-const FilterList = () => import(/* webpackChunkName: "c-filter-list" */ '@/components/pdp/FilterList')
-const FilterCard = () => import(/* webpackChunkName: "c-filter-card" */ '@/components/pdp/FilterCard')
-const ProductList = () => import(/* webpackChunkName: "c-product-list" */ '@/components/pdp/ProductList')
+import {mapGetters} from 'vuex'
+const RatingInfo = () => import(/* webpackChunkName: "c-filter-list" */ '@/components/pdp/RatingInfo')
+const ProductDescription = () => import(/* webpackChunkName: "c-filter-list" */ '@/components/pdp/ProductDescription')
 
 export default {
-  name: 'PdpPage',
+  name: 'ProductDetail',
+
   components: {
-    FilterList,
-    FilterCard,
-    ProductList
+    RatingInfo,
+    ProductDescription
   },
-  data () {
-    return {
-    }
+  data() {
+    return {}
   },
   computed: {
-    ...mapGetters(['isMobile']),
-    keyword () {
-      return this.$route.params.key
-    }
+    ...mapGetters(['isMobile'])
   },
-  methods: {
-  }
+  methods: {}
 }
