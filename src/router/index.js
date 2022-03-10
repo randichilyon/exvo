@@ -4,6 +4,7 @@ import PdpPage from '@/components/pdp/PdpPage'
 import InsertProduct from '@/components/merchant/InsertProduct'
 import EditProduct from '@/components/merchant/EditProduct'
 import ProfilePage from '@/components/profile/ProfilePage'
+import ProductDetail from '@/components/pdp/ProductDetail'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/member/profile',
       name: 'ProfilePage',
       component: ProfilePage
+    },
+    {
+      path: '/p/:productName/:id',
+      name: 'ProductDetail',
+      component: ProductDetail
     }
   ]
 })
