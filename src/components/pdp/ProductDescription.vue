@@ -29,6 +29,7 @@ export default {
 @import "~@blibli/dls/src/assets/scss/mixins/responsive";
 .wrapper{
   text-align: left;
+  height: 500px;
 }
 .title {
   font-size: 18px;

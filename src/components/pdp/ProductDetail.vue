@@ -28,7 +28,7 @@
           <div class="price">
             Rp4.198
           </div>
-          <div>
+          <div class="description">
             <ProductDescription/>
           </div>
         </div>
@@ -233,6 +233,7 @@
   }
 
   &-wrapper-web {
+    height: 850px;
     display: block;
     position: relative;
     background-color: white;
@@ -364,6 +365,7 @@
       }
 
       .price {
+        height: 45px;
         width: 100%;
         float: left;
         font-size: 2.4rem;
@@ -375,11 +377,15 @@
         border-bottom: 1px solid #d6d6d6;
       }
 
+      .description{
+        margin-top: 50px;
+      }
+
       &-rating-info {
         width: 100%;
         position: relative;
         margin-top: -13px;
-
+        height: 20px;
         .rate {
           display: block;
           float: left;
