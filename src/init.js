@@ -9,7 +9,7 @@ import '@blibli/dls/dist/blue.min.css'
 import '@/assets/css/main.scss'
 
 export function initialize () {
-  Vue.config.productionTip = false
+  Vue.config.productionTip = true
 
   Vue.use(Blue)
   Vue.use(BlueIcon)
