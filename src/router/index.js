@@ -10,7 +10,7 @@ export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/product',
+      path: '/cari/:key',
       name: 'PdpPage',
       component: PdpPage
     },

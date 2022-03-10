@@ -36,37 +36,37 @@ export default [
     type: 'switch',
     key: 'isEco',
     scoreKey: 'ecoPoint',
-    max: 100,
+    max: 6,
     fields: [
       {
         key: '1',
-        text: 'Apakah produk dapat digunakan kembali ?',
-        score: 10
+        text: 'Apakah produk ini dapat digunakan kembali (tidak sekali pakai)?',
+        score: 1
       },
       {
         key: '2',
-        text: 'Apakah produk dapat di daur ulang atau terurai ?',
-        score: 20
+        text: 'Apakah produk ini dapat di daur ulang?',
+        score: 1
       },
       {
         key: '3',
-        text: 'Apakah produk terbuat dari tumbuhan atau daging unggas ?',
-        score: 30
+        text: 'Apakah produk ini termasuk dalam kategori energi alternatif?',
+        score: 1
       },
       {
         key: '4',
-        text: 'Apakah produk terbuat dari material yang ramah lingkungan ?',
-        score: 15
+        text: 'Apakah produk ini merupakan produk daur ulang?',
+        score: 1
       },
       {
         key: '5',
-        text: 'Apakah akan ada polusi ataupun limbah yang ditimbulkan dari penggunaan produk ?',
-        score: 15
+        text: 'Apakah pemakaian product ini ramah lingkungan dan tidak menimbulkan polusi?',
+        score: 1
       },
       {
         key: '6',
-        text: 'Apakah packaging produk menggunakan plastik ataupun bahan tidak terurai lain ?',
-        score: 10
+        text: 'Apakah anda mengemas produk ini menggunakan product daur ulang atau ramah lingkungan?',
+        score: 1
       }
     ]
   }
