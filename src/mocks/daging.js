@@ -162,7 +162,7 @@ export default [
     },
     "location": "Kota Bekasi",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false
   },
@@ -348,7 +348,7 @@ export default [
     },
     "location": "Kota Depok",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "62"
@@ -365,7 +365,7 @@ export default [
     },
     "location": "Kota Depok",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1 ,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "53"
@@ -399,7 +399,7 @@ export default [
     },
     "location": "Kota Depok",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "70"
@@ -416,7 +416,7 @@ export default [
     },
     "location": "Kota Depok",
     "badge": "Bronze",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "2"
@@ -466,7 +466,7 @@ export default [
     },
     "location": "Kota Bekasi",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "12"
@@ -551,7 +551,7 @@ export default [
     },
     "location": "Kab. Bogor",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "11"
@@ -585,7 +585,7 @@ export default [
     },
     "location": "Kota Jakarta Selatan",
     "badge": "Diamond",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false,
     "sold": "23"
@@ -635,7 +635,7 @@ export default [
     },
     "location": "Kota Depok",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1,
     "isBlibliShipping": false,
     "2hd": false
   },
@@ -668,7 +668,7 @@ export default [
     },
     "location": "Kota Palembang",
     "badge": "Gold",
-    "greenScore": 3,
+    "greenScore": 1 ,
     "isBlibliShipping": false,
     "2hd": false
   }
