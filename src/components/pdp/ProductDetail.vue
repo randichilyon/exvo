@@ -107,6 +107,40 @@
         </div>
       </div>
     </div>
+    <div class="web-option" v-if="!isMobile">
+      <div class="thumbnail">
+        <img
+          src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//99/MTA-9626048/mgm_1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok-_full01.jpg"
+          alt="default image"
+          height="48px"
+          width="48px"
+          style="border-radius:12px">
+      </div>
+      <div class="name"> 1pc Sedotan Stainless 6mm Korea Food Grade Stainless (Lurus / Bengkok)</div>
+      <div class="space"></div>
+      <div class="minus">
+        <BliButton outline color="secondary"  class="minus-btn"> -</BliButton>
+      </div>
+      <div class="count"> 3</div>
+      <div class="plus">
+        <BliButton outline color="secondary" class="plus-btn"> +</BliButton>
+      </div>
+      <div class="totalPrice">
+        Total Harga<br>
+        <p class="price">Rp4.198</p>
+      </div>
+      <div class="bag">
+        <BliButton class="bag-btn" color="secondary">
+          Tambah ke Bag
+        </BliButton>
+      </div>
+      <div class="buy-now">
+        <BliButton color="primary" class="buy-now-btn"> Beli Sekarang</BliButton>
+      </div>
+      <div class="wishlist">
+        <BliIconWishlist/>
+      </div>
+    </div>
 
     <div class="product-detail-wrapper" v-if="isMobile">
       <div class="product-detail-header">
@@ -192,7 +226,6 @@
   top: 0;
   justify-content: space-between;
 
-
   &-wrapper {
     width: 100%;
     position: relative;
@@ -212,52 +245,85 @@
     bottom: 0;
     z-index: 99;
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px 10px 30px;
     background-color: white;
 
     .thumbnail {
       float: left;
-      width: 5%;
+      width: 4%;
     }
 
     .name {
+      text-align: left;
+      font-size: 14px;
       float: left;
-      width: 30%;
+      width: 31%;
+      padding-left: 5px;
     }
 
     .plus {
       float: left;
       width: 5%;
+      margin-top: 5px;
+      &-btn{
+        height: 40px;
+      }
     }
 
     .count {
+      margin-top: 10px;
       float: left;
-      width: 5%;
+      width: 2%;
     }
 
     .minus {
       float: left;
       width: 5%;
+      margin-left: 90px;
+      margin-top: 5px;
+      &-btn{
+        height: 40px;
+      }
     }
 
     .totalPrice {
+      font-size: 12px;
+      text-align: left;
       float: left;
       width: 10%;
+      color: rgba(0,0,0,.6);
+    }
+
+    .price {
+      color: #f37021;
+      text-align: left;
+      font-size: 1.6rem;
     }
 
     .bag {
       float: left;
-      width: 15%;
+      width: 10%;
+    margin-left: 15px;
+      &-btn{
+        width: 160px;
+      }
     }
 
     .buy-now {
       float: left;
-      width: 15%;
+      width: 10%;
+      margin-left: 50px;
+      &-btn{
+        width: 160px;
+      }
     }
 
     .wishlist {
       float: left;
-      width: 10%;
+      width: 5%;
+      margin-left: 50px;
+      margin-top: 10px;
+      color: #858585;
     }
 
   }
