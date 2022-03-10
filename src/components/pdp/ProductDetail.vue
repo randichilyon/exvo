@@ -121,7 +121,7 @@
       <div class="minus">
         <BliButton outline color="secondary"  class="minus-btn"> -</BliButton>
       </div>
-      <div class="count"> 3</div>
+      <div class="count"> 1</div>
       <div class="plus">
         <BliButton outline color="secondary" class="plus-btn"> +</BliButton>
       </div>
