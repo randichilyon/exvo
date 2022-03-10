@@ -1,13 +1,15 @@
 <template>
-  <div class="pdp-page">
+  <div class="pdp-page fade-in">
     <div
       v-if="isMobile"
       class="header-mobile"
     >
-      <BliIconArrowLeft />
+      <div @click="toMemberPage">
+        <BliIconArrowLeft />
+      </div>
       <div class="search">
         <BliIconSearch />
-        <input :placeholder="keyword" :value="keyword" />
+        <input :placeholder="keyword" :value="keyword" @keyup.enter="search"/>
       </div>
       <BliIconViewList />
       <BliIconBag />
@@ -103,6 +105,23 @@
       border: none;
       background-color: #f1f1f1;
     }
+  }
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

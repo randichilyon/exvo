@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-wrapper">
       <div class="header-left">
-        <img class="logo" src="https://www.static-src.com/frontend/static/img/logo-blibli-white.f8255fc.svg" alt="Blibli - online mall"/>
+        <img class="logo" src="https://www.static-src.com/frontend/static/img/logo-blibli-white.f8255fc.svg" alt="Blibli - online mall" @click="toMemberPage"/>
         <div class="category">
           <BliIconViewGrid class="grid" />
           <div class="text">
@@ -18,7 +18,10 @@
           </div>
           <BliIconChevronDown />
         </div>
-        <input placeholder="sedotan" />
+        <input :placeholder="placeholder" size="small" @keyup.enter="search" :value="key"/>
+        <BliButton style="height: 32px;border-radius: 8px;align-self: center" color="secondary" @click="search">
+          <BliIconSearch style="transform: scale(.75); cursor: pointer" />
+        </BliButton>
       </div>
       <div class="header-right">
         <div class="icon-wrapper">
@@ -58,7 +61,27 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  computed: {
+    placeholder () {
+      return this.$route.name === 'PdpPage' ? this.$route.params.key : 'Kamu lagi cari apa?'
+    },
+    key () {
+      return this.$route.key
+    }
+  },
+  methods: {
+    search () {
+      if (this.$route.params.key === 'sedotan') {
+        this.$router.push('/cari/daging')
+        return
+      }
+      this.$router.push('/cari/sedotan')
+    },
+    toMemberPage () {
+      this.$router.push('/member/profile')
+    }
+  }
 }
 </script>
 
@@ -71,6 +94,7 @@ export default {
   position: sticky;
   z-index: 99;
   top: 0;
+  min-width: 1200px;
   justify-content: space-between;
   &-wrapper {
     display: flex;
@@ -80,6 +104,7 @@ export default {
     width: 130px;
     .logo {
       max-width: 120px;
+      cursor: pointer;
     }
     .category {
       display: flex;

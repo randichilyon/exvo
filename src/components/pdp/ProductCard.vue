@@ -2,6 +2,7 @@
   <BliCard
     class="product-card"
     :class="highlight"
+    @click.native="redirect"
   >
     <img
       class="product-card__image"

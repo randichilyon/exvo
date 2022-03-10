@@ -13,5 +13,8 @@ export default {
     }
   },
   methods: {
+    redirect () {
+      this.$router.push('/p/1pc-sedotan-stainless-6mm-korea-food-grade-stainless-lurus-bengkok/ps--MGO-60026-00429')
+    }
   }
 }

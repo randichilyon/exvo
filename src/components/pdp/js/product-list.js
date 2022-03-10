@@ -1,5 +1,6 @@
 import { mapGetters } from 'vuex'
 import sedotan from '@/mocks/sedotan'
+import daging from '@/mocks/daging'
 
 const ProductCard = () => import(/* webpackChunkName: "c-product-card" */ '@/components/pdp/ProductCard')
 
@@ -49,7 +50,7 @@ export default {
   computed: {
     ...mapGetters(['filterGreen', 'isMobile']),
     shownProducts () {
-      let result = [...sedotan]
+      let result = this.$route.params.key === 'sedotan' ? [...sedotan] : [...daging]
       if (this.filterGreen) {
         result = result.filter(data => {
           return data.greenScore > 2

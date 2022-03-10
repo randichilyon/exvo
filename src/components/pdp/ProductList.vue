@@ -29,8 +29,8 @@
     </div>
     <div class="product-list__bottom">
       <ProductCard
-        v-for="product in shownProducts"
-        :key="product.name"
+        v-for="(product, idx) in shownProducts"
+        :key="idx"
         :product="product"
       />
     </div>
