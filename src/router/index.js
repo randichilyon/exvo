@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import PdpPage from '@/components/pdp/PdpPage'
 import InsertProduct from '@/components/merchant/InsertProduct'
 import EditProduct from '@/components/merchant/EditProduct'
+import ProfilePage from '@/components/profile/ProfilePage'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/merchant/product/1',
       name: 'EditProduct',
       component: EditProduct
+    },
+    {
+      path: '/member/profile',
+      name: 'ProfilePage',
+      component: ProfilePage
     }
   ]
 })

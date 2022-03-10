@@ -22,5 +22,15 @@ export default {
     }
   },
   methods: {
+    search () {
+      if (this.$route.params.key === 'sedotan') {
+        this.$router.push('/cari/daging')
+        return
+      }
+      this.$router.push('/cari/sedotan')
+    },
+    toMemberPage () {
+      this.$router.push('/member/profile')
+    }
   }
 }
