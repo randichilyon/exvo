@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="blu">
-    <!-- <Header v-if="!isMobile" /> -->
+    <Header v-if="!isMobile && showHeader" />
     <router-view/>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
     this.handleResize()
   },
   computed: {
-    ...mapGetters(['isMobile']),
+    ...mapGetters(['isMobile', 'showHeader']),
   },
   methods: {
     ...mapActions([

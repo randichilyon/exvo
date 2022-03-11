@@ -28,11 +28,7 @@ export default {
     ...mapGetters(['isMobile'])
   },
   created () {
-    import(/* webpackChunName: 'lib-bli-header'*/
-      '@blibli/dls/dist/add-ons/header')
-      .then(lib => {
-        this.libs.BliHeader = lib.BliHeader
-      })
+    this.$store.commit('setShowHeader', false)
   },
   methods: {
     handleSwitch(key, value) {

@@ -1,6 +1,7 @@
 const state = {
   isMobile: false,
-  filterGreen: false
+  filterGreen: false,
+  showHeader: true
 }
 
 const getters = {
@@ -9,6 +10,9 @@ const getters = {
   },
   filterGreen: (state) => {
     return state.filterGreen
+  },
+  showHeader(state) {
+    return state.showHeader
   }
 }
 
@@ -18,6 +22,9 @@ const mutations = {
   },
   setFilterGreen (state, value) {
     state.filterGreen = value
+  },
+  setShowHeader (state, value) {
+    state.showHeader = value
   }
 }
 
