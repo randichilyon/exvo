@@ -286,7 +286,7 @@
     <BliModal type="page" :bli-active.sync="visibleModal" @maskClick="visibleModal = false"
               @close="visibleModal = false" :controls="controls">
       <BliModalHeader style="text-align: left; margin-bottom: 30px;">
-        Bagikan green profilmu ke {{ social }}?
+        Bagikan green profile-mu ke {{ social }}?
       </BliModalHeader>
       <BliModalBody>
         <BliCard class="rating-card-modal">

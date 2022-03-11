@@ -15,6 +15,10 @@ export default {
     return {
     }
   },
+  created () {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  },
   computed: {
     ...mapGetters(['isMobile']),
     keyword () {
