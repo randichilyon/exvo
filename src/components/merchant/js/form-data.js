@@ -6,10 +6,10 @@ export default [
     key: 'productName'
   },
   {
-    name: 'Deskripsi produk',
+    name: 'Brand',
     type: 'text',
     message: '',
-    key: 'productDescription'
+    key: 'brand'
   },
   {
     name: 'Kategori produk',
@@ -20,6 +20,10 @@ export default [
       {
         label: 'Makanan dan Minuman',
         value: 'f&b'
+      },
+      {
+        label: 'Perlengkapan Rumah Tangga',
+        value: 'home'
       },
       {
         label: 'Handphone',
@@ -69,5 +73,11 @@ export default [
         score: 1
       }
     ]
+  },
+  {
+    name: 'Deskripsi produk',
+    type: 'editor',
+    message: '',
+    key: 'productDescription'
   }
 ]

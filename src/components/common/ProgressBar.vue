@@ -4,7 +4,7 @@
       <div :style="progressStyle" />
     </div>
     <div>
-      green score {{`${current} / ${max}`}}
+      eco score {{`${current} / ${max}`}}
     </div>
   </div>
 </template>

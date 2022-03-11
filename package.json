@@ -14,7 +14,8 @@
     "polyfill-io-feature-detection": "^1.1.15",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-script2": "^2.1.0"
+    "vue-script2": "^2.1.0",
+    "vue2-editor": "^2.10.3"
   },
   "devDependencies": {
     "@blibli/blue-icon": "^0.14.0",

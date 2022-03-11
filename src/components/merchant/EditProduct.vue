@@ -1,10 +1,6 @@
 <template>
   <div class="insert-product">
-    <Component :is="libs.BliHeader" title="Cart" :left-menu="leftMenu" no-shadow>
-      <div slot="back">
-        <BliIconArrowLeft />
-      </div>
-    </Component>
+    <img src="@/assets/png/header.png">
     <div class="forms">
       <template v-for="form in forms">
 
@@ -14,6 +10,10 @@
             {{form.name}}
           </label>
         </BliField>
+
+        <vue-editor :key="form.key" v-else-if="form.type === 'editor'" v-model="values[form.key]">
+
+        </vue-editor>
 
         <BliDropdown
           v-else-if="form.type === 'dropdown'"
@@ -43,12 +43,11 @@
             @selectItem="handleItemSelect(form.scoreKey, form.fields, $event)"
           >
             <BliListItem
-              v-for="(field, n) in form.fields"
+              v-for="(field) in form.fields"
               :value="field.key"
               :key="field.key"
-              :desc-text="field.text"
             >
-              pertanyaan ke {{ n + 1 }}
+              {{ field.text }}
             </BliListItem>
           </BliList>
 
@@ -74,10 +73,30 @@
   </div>
 </template>
 
-<script src="./js/edit-product.js"></script>
+<script src="./js/insert-product-page.js"></script>
+
+<style lang="scss">
+.blu-list__item-heading>label {
+  
+  margin-left: 16px;
+  
+}
+</style>
 
 <style lang="scss" scoped>
 .insert-product {
+  z-index: 0;
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 16px;
+    display: flex;
+    box-shadow: 0 1px 6px 0 rgb(0, 0, 0 / 12%);
+    z-index: 999;
+    background-color: white;
+  }
   max-width: 600px;
   text-align: left;
   margin: 16px;
@@ -87,6 +106,7 @@
     margin: 16px auto;
   }
   .forms {
+    z-index: 0;
     padding-bottom: 80px;
   }
   .switch {

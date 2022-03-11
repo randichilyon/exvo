@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="blu">
-    <Header v-if="!isMobile" />
+    <!-- <Header v-if="!isMobile" /> -->
     <router-view/>
   </div>
 </template>

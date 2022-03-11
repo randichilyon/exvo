@@ -1,6 +1,6 @@
 import formData from './form-data'
-import { BliHeader } from '@blibli/dls/dist/add-ons/header'
 import ProgressBar from '../../common/ProgressBar'
+import { VueEditor } from "vue2-editor";
 
 export default {
   data () {
@@ -25,14 +25,15 @@ export default {
     }
   },
   components: {
-    BliHeader,
+    VueEditor,
     ProgressBar
   },
   created () {
-    // var t = this;
-    // i.e(39).then(i.bind(null, 274)).then((function(e) {
-    //   t.libs.BliHeader = e.BliHeader
-    // }))
+    import(/* webpackChunName: 'lib-bli-header'*/
+      '@blibli/dls/dist/add-ons/header')
+      .then(lib => {
+        this.libs.BliHeader = lib.BliHeader
+      })
   },
   methods: {
     handleSwitch(key, value) {
