@@ -13,7 +13,7 @@ export default {
         disabled: !1
       }, {
         icon: "BliIconProfile",
-        name: "Green profile",
+        name: "Eco profile",
         disabled: !1
       }],
       name: 'Exvo',

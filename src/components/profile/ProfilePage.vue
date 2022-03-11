@@ -140,7 +140,7 @@
                 <div class="card-wrapper">
                   <BliCard class="rating-card">
                     <div class="rating-wrapper">
-                      <div class="category-title">Rating</div>
+                      <div class="category-title">Eco points</div>
                       <div class="share">
                         Bagikan:
                         <img src="@/assets/png/ig.png" @click="openModal('Instagram')"/>
@@ -160,11 +160,11 @@
                     </div>
                     <div class="percent">
                       Exvo, <b>93%</b> pesanan kamu masuk  kategori ramah lingkungan loh...<br />
-                      Terima kasih telah mendukung Aksi Blibli Cinta Bumi :)
+                      Terima kasih telah mendukung Blibli dalam <a>#AksiCintaBumi</a> :)
                     </div>
                   </BliCard>
                   <BliCard v-if="!isMobile" class="rating-card">
-                    <div class="category-title">Top 5 Category</div>
+                    <div class="category-title">Top 5 Kategori</div>
                     <div class="category">
                       <div class="category__name">1. Bliblimart</div>
                       <div class="rating-card__wrapper">
@@ -286,7 +286,7 @@
     <BliModal type="page" :bli-active.sync="visibleModal" @maskClick="visibleModal = false"
               @close="visibleModal = false" :controls="controls">
       <BliModalHeader style="text-align: left; margin-bottom: 30px;">
-        Bagikan green profile-mu ke {{ social }}?
+        Bagikan eco profile-mu ke {{ social }}?
       </BliModalHeader>
       <BliModalBody>
         <BliCard class="rating-card-modal">
