@@ -1,8 +1,14 @@
 <template>
-  <div class="product-detail">
+  <div class="product-detail fade-in">
     <div class="product-detail-wrapper-web" v-if="!isMobile">
       <div class="breadcrumb">
-        <a>Home & Living</a> > <a>Perlengkapan Ruang Makan</a> > <a>Peralatan Minum</a> > Gelas & Perangkat Minum
+        <a>Home & Living</a>
+        <BliIconChevronRight />
+        <a>Perlengkapan Ruang Makan</a>
+        <BliIconChevronRight />
+        <a>Peralatan Minum</a>
+        <BliIconChevronRight />
+        <div>Gelas & Perangkat Minum</div>
       </div>
       <div class="web-content">
         <div class="web-content-left">
@@ -40,9 +46,18 @@
                      style="width: 40px;height: 40px">
               </div>
               <div class="detail">
-                <a>MGM Online</a><br>
-                Kota Jakarta Barat<br>
-                Buka Kamis 08.00 - 17.00 WIB
+                <a>MGM Online</a>
+                <div class="detail__location">
+                  <BliIconLocation />
+                  <div>Kota Jakarta Barat, DKI Jakarta</div>
+                </div>
+                <div class="detail__time">
+                  <BliIconWatch />
+                  <div class="detail__time-text">
+                    <div class="open">Buka</div>
+                    <div class="time">08.00 - 17.00 WIB</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="merchant-info-mid">
@@ -61,10 +76,10 @@
             </div>
             <div class="merchant-info-bottom">
               <div class="follow">
-                <BliButton color="secondary" class="follow-btn"> ikuti</BliButton>
+                <BliButton size="small" color="secondary"> <BliIconPlus /> Ikuti</BliButton>
               </div>
               <div class="seller-chat">
-                <BliButton outline color="secondary" class="seller-chat-btn">
+                <BliButton size="small" outline color="secondary">
                   <BliIconChat class="btn-chat"/>
                   Chat
                 </BliButton>
@@ -145,8 +160,8 @@
     <div class="product-detail-wrapper" v-if="isMobile">
       <div class="product-detail-header">
         <div class="product-detail-header-left">
-          <div class="icon">
-            <BliIconArrowLeft/>
+          <div @click="toPlp" class="icon">
+            <BliIconArrowLeft />
           </div>
         </div>
         <div class="product-detail-header-right">
@@ -334,6 +349,16 @@
     padding-top: 10px;
     text-align: left;
     font-family: "effra", Helvetica, Arial, sans-serif;
+    display: flex;
+    gap: 8px;
+    a, div {
+      align-self: center;
+    }
+    svg {
+      transform: scale(.75);
+      align-self: center;
+      color: #898989;
+    }
   }
 
   .web-content {
@@ -356,6 +381,7 @@
 
       .product-name {
         text-align: left;
+        font-size: 2rem;
       }
 
       .eco {
@@ -406,16 +432,54 @@
 
         &-header {
           height: 100px;
-
+          display: flex;
+          gap: 12px;
           .image {
-            width: 30%;
-            float: left;
+            min-width: 48px;
           }
-
           .detail {
             width: 70%;
-            float: left;
             text-align: left;
+            font-size: 1.4rem;
+            display: flex;
+            flex-direction: column;
+            a {
+              font-family: efframedium;
+            }
+            &__location {
+              display: flex;
+              margin-left: -6px;
+              div, svg {
+                align-self: center;
+                font-size: 12px;
+                color: #858585;
+              }
+              svg {
+                transform: scale(.75);
+              }
+              div {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+            &__time {
+              display: flex;
+              color: #858585;
+              margin-left: -6px;
+              font-size: 12px;
+              svg {
+                transform: scale(.75);
+              }
+              &-text {
+                .open {
+                  color: #8bc63f;
+                }
+                .time {
+                  color: rgba(0,0,0,.87)
+                }
+              }
+            }
           }
         }
 
@@ -449,25 +513,28 @@
         }
 
         &-bottom {
-          padding-top: 20px;
-
+          display: flex;
+          gap: 8px;
+          padding: 20px 10px 0 10px;
           .follow {
-            float: left;
-            width: 50%;
-
+            width: 100%;
+            button {
+              width: 100%;
+            }
             &-btn {
-              width: 100px;
+              width: 100%;
               height: 32px;
             }
           }
 
           .seller-chat {
-            float: left;
-            width: 50%;
-
+            width: 100%;
+            button {
+              width: 100%;
+            }
             &-btn {
+              width: 100%;
               height: 32px;
-              width: 100px;
             }
           }
         }
@@ -613,6 +680,23 @@
   height: 32px;
   width: 32px;
   display: inline-grid;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: .5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 </style>

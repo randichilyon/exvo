@@ -4,7 +4,7 @@
       v-if="isMobile"
       class="header-mobile"
     >
-      <div @click="toMemberPage">
+      <div class="back" @click="toMemberPage">
         <BliIconArrowLeft />
       </div>
       <div class="search">
@@ -83,6 +83,12 @@
   padding: 12px;
   position: sticky;
   top: 0;
+  .back {
+    align-self: center;
+    svg {
+      color: rgb(133, 133, 133);
+    }
+  }
   svg {
     align-self: center;
     color: rgb(133, 133, 133);

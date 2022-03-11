@@ -6,11 +6,10 @@
       <div class="usp">
         <div class="return">
           <BliIconFreeReturn/>
-        </div> &nbsp;&nbsp;Gratis retur 15 hari (bersyarat)
+          <div>Gratis retur 15 hari (bersyarat)</div>
+        </div>
       </div>
     </a>
-    <br>
-    <br>
     <p>Dimensi:</p>
     Sedotan Bengkok Tinggi: 20.5CM
     <br>
@@ -29,7 +28,7 @@ export default {
 @import "~@blibli/dls/src/assets/scss/mixins/responsive";
 .wrapper{
   text-align: left;
-  height: 500px;
+  font-size: 1.4rem;
 }
 .title {
   font-size: 18px;
@@ -46,6 +45,15 @@ export default {
   padding-top: 10px;
 
 .return {
+  display: flex;
+  font-size: 1.4rem;
+  div {
+    align-self: center;
+  }
+  svg {
+    align-self: center;
+    transform: scale(.75);
+  }
 }
 }
 </style>

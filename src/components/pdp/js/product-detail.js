@@ -15,5 +15,9 @@ export default {
   computed: {
     ...mapGetters(['isMobile'])
   },
-  methods: {}
+  methods: {
+    toPlp () {
+      this.$router.push('/cari/sedotan')
+    }
+  }
 }

@@ -17,10 +17,14 @@
 
 .rating-info {
   float: left;
-  display: inline-flex;
+  display: flex;
 
   .star {
+    align-self: center;
     color: #fdb813;
+    svg {
+      transform: scale(.75);
+    }
   }
 
   .wording {
