@@ -41,6 +41,46 @@ export default [
     key: 'isEco',
     scoreKey: 'ecoPoint',
     max: 6,
+    fieldsFood: [
+      {
+        key: '1',
+        text: 'Apakah product ini tergolong:',
+        score: 0,
+        noAction: true,
+        nested: [
+          {
+            key: 'nut',
+            text: 'sayuran,gandum,biji bijian, karbohidrat kompleks',
+            score: 5
+          },
+          {
+            key: 'poutry',
+            text: 'ayam',
+            score: 3
+          },
+          {
+            key: 'fish',
+            text: 'ikan / babi',
+            score: 2
+          },
+          {
+            key: 'sapi',
+            text: 'sapi',
+            score: 1
+          },
+          {
+            key: 'other',
+            text: 'lainnya',
+            score: 1
+          }
+        ]
+      },
+      {
+        key: '2',
+        text: 'Apakah anda mengemas produk ini menggunakan produk daur ulang atau ramah lingkungan?',
+        score: 1
+      }
+    ],
     fields: [
       {
         key: '1',

@@ -1,6 +1,7 @@
 <template>
   <div class="insert-product">
-    <img src="@/assets/png/header.png">
+    <img v-if="isMobile" src="@/assets/png/header.png">
+    <img v-else class="desktop-header" src="@/assets/png/desktop-header.png">
     <div class="forms">
       <template v-for="form in forms">
 
@@ -11,8 +12,10 @@
           </label>
         </BliField>
 
-        <vue-editor :key="form.key" v-else-if="form.type === 'editor'" v-model="values[form.key]">
-        </vue-editor>
+        <div class="editor" :key="form.key" v-else-if="form.type === 'editor'">
+          <vue-editor v-model="values[form.key]">
+          </vue-editor>
+        </div>
 
         <BliDropdown
           v-else-if="form.type === 'dropdown'"
@@ -37,7 +40,7 @@
           </BliSwitch>
 
           <BliList
-            v-if="values[form.key]"
+            v-if="values[form.key] && values.category !== 'f&b'"
             multiselect checkbox-left
             @selectItem="handleItemSelect(form.scoreKey, form.fields, $event)"
           >
@@ -49,6 +52,22 @@
               {{ field.text }}
             </BliListItem>
           </BliList>
+
+          <BliList
+            v-if="values[form.key] && values.category === 'f&b'"
+            multiselect checkbox-left
+            @selectItem="handleItemSelect(form.scoreKey, form.fields, $event)"
+          >
+            <BliListItem
+              v-for="(field) in form.fieldsFood"
+              :value="field.key"
+              :key="field.key"
+            >
+              {{ field.text }}
+            </BliListItem>
+          </BliList>
+
+
 
           <progress-bar v-if="values[form.key]" :max="form.max" :current="values[form.scoreKey] || 0" />
         </div>
@@ -76,15 +95,22 @@
 
 <style lang="scss">
 .blu-list__item-heading>label {
-  
-  margin-left: 16px;
-  
+  margin-left: 16px; 
 }
 </style>
 
 <style lang="scss" scoped>
 .insert-product {
   z-index: 0;
+  .desktop-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+  }
+  .editor {
+    margin-top: 16px;
+  }
   .header {
     position: fixed;
     top: 0;
@@ -103,6 +129,7 @@
   min-height: 100vh;
   @media screen and(min-width: 600px) {
     margin: 16px auto;
+    padding-top: 180px;
   }
   .forms {
     z-index: 0;

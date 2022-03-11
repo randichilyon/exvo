@@ -1,6 +1,7 @@
 import formData from './form-data'
 import ProgressBar from '../../common/ProgressBar'
 import { VueEditor } from "vue2-editor";
+import {mapGetters} from 'vuex'
 
 export default {
   data () {
@@ -20,6 +21,9 @@ export default {
   components: {
     ProgressBar,
     VueEditor
+  },
+  computed: {
+    ...mapGetters(['isMobile'])
   },
   created () {
     import(/* webpackChunName: 'lib-bli-header'*/
