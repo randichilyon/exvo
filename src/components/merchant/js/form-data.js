@@ -71,7 +71,7 @@ export default [
           {
             key: 'other',
             text: 'lainnya',
-            score: 1
+            score: 0
           }
         ]
       },

@@ -23,7 +23,7 @@ export default new Router({
     },
     {
       path: '/merchant/product/1',
-      name: 'EditProduct',
+      name: 'editProduct',
       component: EditProduct
     },
     {

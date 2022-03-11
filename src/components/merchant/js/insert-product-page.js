@@ -15,7 +15,9 @@ export default {
       rightMenu: ["wishlist", "more"],
       blueImage: "https://blue.blibli.com/static/img/dls-logo.013007a.svg",
       selectMapping: {},
-      visibleModal: false
+      visibleModal: false,
+      test: null,
+      prevScore: 0
     }
   },
   components: {
@@ -65,6 +67,10 @@ export default {
       this.visibleModal = false
       this.values = {}
       this.selectMapping = {}
+    },
+    handleRadio(score) {
+      this.values.ecoPoint = this.values.ecoPoint + score - this.prevScore
+      this.prevScore = score
     }
   }
 }

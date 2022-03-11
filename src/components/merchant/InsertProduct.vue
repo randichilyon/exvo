@@ -40,7 +40,29 @@
           </BliSwitch>
 
           <BliList
-            v-if="values[form.key] && values.category !== 'f&b'"
+            v-if="values[form.key] && values.category && values.category.value === 'f&b'"
+            multiselect checkbox-left
+            @selectItem="handleItemSelect(form.scoreKey, form.fieldsFood, $event)"
+          >
+            <BliListItem
+              v-for="(field) in form.fieldsFood"
+              :value="field.key"
+              :key="field.key"
+              :class="field.nested ? 'list-nested' : ''" 
+            >
+              {{ field.text }}
+              <template v-if="field.nested">
+                <div  v-for="option in field.nested" :key="option.key">
+                  <BliRadio v-model="test" :value="option.score" @change="handleRadio(option.score)">
+                    {{ option.text }}
+                  </BliRadio>
+                </div>
+              </template>
+            </BliListItem>
+          </BliList>
+
+          <BliList
+            v-else-if="values[form.key]"
             multiselect checkbox-left
             @selectItem="handleItemSelect(form.scoreKey, form.fields, $event)"
           >
@@ -52,22 +74,6 @@
               {{ field.text }}
             </BliListItem>
           </BliList>
-
-          <BliList
-            v-if="values[form.key] && values.category === 'f&b'"
-            multiselect checkbox-left
-            @selectItem="handleItemSelect(form.scoreKey, form.fields, $event)"
-          >
-            <BliListItem
-              v-for="(field) in form.fieldsFood"
-              :value="field.key"
-              :key="field.key"
-            >
-              {{ field.text }}
-            </BliListItem>
-          </BliList>
-
-
 
           <progress-bar v-if="values[form.key]" :max="form.max" :current="values[form.scoreKey] || 0" />
         </div>
@@ -96,6 +102,17 @@
 <style lang="scss">
 .blu-list__item-heading>label {
   margin-left: 16px; 
+}
+.list-nested {
+  .blu-list__item {
+    span {
+      .blu-list__item-heading {
+        .blu-checkbox {
+          display: none;
+        }
+      }
+    }
+  }
 }
 </style>
 
